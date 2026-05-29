@@ -1,0 +1,17 @@
+com\college\repository\CollegeRepository.class
+com\college\repository\UserRepository.class
+com\college\service\AuthService.class
+com\college\dto\LoginRequest.class
+com\college\CollegeApplication.class
+com\college\model\SavedCollege.class
+com\college\controller\AuthController.class
+com\college\model\User.class
+com\college\dto\SaveCollegeRequest.class
+com\college\service\CollegeService.class
+com\college\controller\HomeController.class
+com\college\dto\RegisterRequest.class
+com\college\model\College.class
+com\college\config\CorsConfig.class
+com\college\repository\SavedCollegeRepository.class
+com\college\controller\CollegeController.class
+com\college\config\GlobalExceptionHandler.class
