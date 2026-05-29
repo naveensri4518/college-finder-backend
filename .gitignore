@@ -1,0 +1,30 @@
+# Maven
+/target/
+!**/src/main/**/target/
+**/target/
+**/out/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs
+/.idea/
+*.iml
+
+# Eclipse
+.settings/
+
+# IntelliJ
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Temporary files
+*~
+*.tmp
