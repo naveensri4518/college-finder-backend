@@ -1,0 +1,13 @@
+# ==========================================
+# Railway.toml — Backend Service Configuration
+# Place this in: backend/railway.toml
+# ==========================================
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "java -Dserver.port=$PORT -jar target/college-discovery-1.0.0.jar"
+healthcheckPath = "/health"
+healthcheckTimeout = 120
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
