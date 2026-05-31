@@ -1,9 +1,15 @@
-# nixpacks.toml for backend — tells Railway how to build the Spring Boot JAR
+# nixpacks.toml — Spring Boot on Railway (Java 21)
+# This file tells Railway exactly how to build and start your backend.
+
 [phases.setup]
-nixPkgs = ["jdk21"]
+nixPkgs = ["jdk21_headless"]
+
+[phases.install]
+# Make Maven wrapper executable (required on Linux)
+cmds = ["chmod +x mvnw"]
 
 [phases.build]
-cmds = ["./mvnw clean package -DskipTests -q"]
+cmds = ["./mvnw clean package -DskipTests --no-transfer-progress"]
 
 [start]
-cmd = "java -Dserver.port=$PORT -jar target/college-discovery-1.0.0.jar"
+cmd = "java -Dserver.port=$PORT -jar target/app.jar"
